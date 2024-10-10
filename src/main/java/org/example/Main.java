@@ -27,27 +27,38 @@ public class Main {
         }
     }
 
+    public static int RandomScaledValue(int MaxValue){
+        double RandomInt = (Math.random() * 100f);
+        int RandomValueScaled = (int) ((RandomInt / 100f) * MaxValue);
+//        System.out.println(RandomValueScaled);
+        return RandomValueScaled;
+    }
+
     public static void StringArrayProgram(){
-        String[] StringArray = new String[10];
-        StringArray[0] = "Hello";
-        StringArray[1] = "World";
-        StringArray[2] = "Penis";
-        StringArray[3] = "Dick";
-        StringArray[4] = "Hui";
-        StringArray[5] = "Mamuka";
-        StringArray[6] = "Bober";
-        StringArray[7] = "Mandust";
-        StringArray[8] = "Nigga";
-        StringArray[9] = "Pelmeni";
-
-        int length = StringArray.length - 1;
-
-        for (int i = length; i >= 0; i--) {
-            StringArray[i] = StringArray[i] + "!";
-            int Lenght = StringArray[i].length();
-            StringArray[i] = ReverseString(StringArray[i]);
-            System.out.println(Lenght +" = "+ StringArray[i]);
+//        for (int i = 0; i < 100; i++){
+//            RandomScaledValue(26);
+//        }
+        String AlphabetString = "abcdefghijklmnopqrstuvwxyz";
+        char RandomChar;
+        String RandomString = "";
+        int RandomIndex = 0;
+        int StringLenght;
+        StringLenght = RandomScaledValue(10);
+        for (int i = 0; i <= StringLenght; i++) {
+            RandomIndex = RandomScaledValue(26);
+            RandomChar = AlphabetString.charAt(RandomIndex);
+            RandomString = RandomString + RandomChar;
         }
+//        System.out.println(RandomString);
+
+//        int length = StringArray.length - 1;
+//
+//        for (int i = length; i >= 0; i--) {
+//            StringArray[i] = StringArray[i] + "!";
+//            int Lenght = StringArray[i].length();
+//            StringArray[i] = ReverseString(StringArray[i]);
+//            System.out.println(Lenght +" = "+ StringArray[i]);
+//        }
     }
 
     public static void main(String[] args) {
